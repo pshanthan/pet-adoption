@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Pet } from '../../models/Pet';
 import { PetService } from '../pet.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pet',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pet.component.html',
   styleUrl: './pet.component.css',
 })
