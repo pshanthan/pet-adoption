@@ -6,12 +6,13 @@ import {
   FormControl,
   FormControlName,
   FormGroup,
+  ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 
 @Component({
   selector: 'app-pet',
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './pet.component.html',
   styleUrl: './pet.component.css',
 })
