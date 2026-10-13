@@ -16,4 +16,7 @@ export class PetService {
   addPet(p: Pet): Observable<Pet> {
     return this.httpClient.post<Pet>(this.apiUrl, p);
   }
+  deletePet(id: number) {
+    return this.httpClient.delete(`${this.apiUrl}/${id}`);
+  }
 }
