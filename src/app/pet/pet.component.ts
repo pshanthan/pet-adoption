@@ -60,6 +60,13 @@ export class PetComponent implements OnInit {
   }
   onSubmit() {
     const raw = this.petForm.getRawValue();
+    const transformedPet: Pet = {
+      name: raw.name,
+      species: raw.species,
+      adopted: Boolean(raw.adopted),
+      age: Number(raw.age),
+      arrivalDate: raw.arrvialDate,
+    };
   }
   deletePet() {}
 }
