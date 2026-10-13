@@ -1,4 +1,4 @@
-<div [formGroup]="petForm">
+<div [formGroup]="petForm" (ngSubmit)="onSubmit()">
   <input formControlName="name" />
   <input formControlName="species" />
   <input formControlName="arrivalDate" />
