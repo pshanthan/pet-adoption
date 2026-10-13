@@ -18,6 +18,7 @@ import {
 })
 export class PetComponent implements OnInit {
   pets: Pet[] = [];
+  editingId: number | null = null;
   petForm = new FormGroup({
     name: new FormControl('', {
       nonNullable: true,
@@ -47,5 +48,14 @@ export class PetComponent implements OnInit {
   getPets() {
     this.petService.getPets().subscribe((p) => (this.pets = p));
   }
-  startEdit(p: Pet) {}
+  startEdit(p: Pet) {
+    this.editingId = p.id ?? null;
+    this.petForm.patchValue({
+      name: p.name,
+      species: p.species,
+      arrvialDate: p.arrivalDate,
+      adopted: String(p.adopted),
+      age: String(p.age),
+    });
+  }
 }
