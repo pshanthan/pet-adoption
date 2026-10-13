@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../models/Pet';
 import { PetService } from '../pet.service';
 import { CommonModule } from '@angular/common';
@@ -9,10 +9,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './pet.component.html',
   styleUrl: './pet.component.css',
 })
-export class PetComponent {
+export class PetComponent implements OnInit {
   pets: Pet[] = [];
   constructor(private petService: PetService) {}
-  getPet() {
+  ngOnInit(): void {
+    this.getPets();
+  }
+  getPets() {
     this.petService.getPets().subscribe((p) => (this.pets = p));
   }
 }
