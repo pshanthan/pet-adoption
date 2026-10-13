@@ -58,4 +58,5 @@ export class PetComponent implements OnInit {
       age: String(p.age),
     });
   }
+  deletePet() {}
 }
