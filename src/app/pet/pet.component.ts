@@ -58,6 +58,8 @@ export class PetComponent implements OnInit {
       age: String(p.age),
     });
   }
-  onSubmit() {}
+  onSubmit() {
+    const raw = this.petForm.getRawValue();
+  }
   deletePet() {}
 }
