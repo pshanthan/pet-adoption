@@ -1,3 +1,10 @@
+<div [formGroup]="petForm">
+  <input formControlName="name" />
+  <input formControlName="species" />
+  <input formControlName="arrivalDate" />
+  <input formControlName="age" />
+  <input type="checkbox" formControlName="adopted" />
+</div>
 <div *ngFor="let p of pets">
   {{ p.name }} - {{ p.species }} - {{ p.arrivalDate }} - {{ p.age }} -
   {{ p.adopted }}
