@@ -1,0 +1,28 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Biscuit",
+      "species": "Dog",
+      "age": 2,
+      "arrivalDate": "2026-10-01",
+      "adopted": false
+    },
+    {
+      "id": 2,
+      "name": "Mochi",
+      "species": "Cat",
+      "age": 1,
+      "arrivalDate": "2026-10-05",
+      "adopted": true
+    },
+    {
+      "id": 3,
+      "name": "Kiwi",
+      "species": "Parrot",
+      "age": 3,
+      "arrivalDate": "2026-10-08",
+      "adopted": false
+    }
+  ]
+}
