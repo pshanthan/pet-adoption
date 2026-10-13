@@ -47,4 +47,5 @@ export class PetComponent implements OnInit {
   getPets() {
     this.petService.getPets().subscribe((p) => (this.pets = p));
   }
+  startEdit(p: Pet) {}
 }
