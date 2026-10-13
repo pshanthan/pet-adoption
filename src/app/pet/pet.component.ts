@@ -67,6 +67,18 @@ export class PetComponent implements OnInit {
       age: Number(raw.age),
       arrivalDate: raw.arrvialDate,
     };
+    if(this.editingId){
+      const found = this.pets.filter((p) => p.id === this.editingId);
+      if(found){
+ 
+      }
+    }else{
+      
+      this.petService.addPet((p) => {this.pets = [...this.pets, p]})
+    }
   }
-  deletePet() {}
+  deletePet(id : number) {
+    this.petService.deletePet(() => {this.pets = })
+  }
+
 }
