@@ -8,4 +8,6 @@
 <div *ngFor="let p of pets">
   {{ p.name }} - {{ p.species }} - {{ p.arrivalDate }} - {{ p.age }} -
   {{ p.adopted }}
+  <div (click)="startEdit()">EDIT</div>
+  <div (click)="DeletePet()">DELETE</div>
 </div>
